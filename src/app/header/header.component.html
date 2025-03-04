@@ -1,0 +1,46 @@
+<header [ngClass]="{'shadow': scrolled}" class="bg-white fixed top-0 left-0 w-full z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16">
+      <!-- Mobile Logo / Brand (visible only on small screens) -->
+      <div class="flex-shrink-0 flex items-center md:hidden">
+        <a routerLink="/">
+          <img src="/assets/icons/logo/vmp_trans_logo.png" alt="BrandName Logo" class="h-8 w-auto">
+        </a>
+      </div>
+      <!-- Navigation (for medium and above, logo omitted here) -->
+      <nav class="hidden md:flex md:items-center ml-auto space-x-8">
+        <a href="#home" class="px-3 py-2 text-sm font-medium text-gray-700 uppercase hover:text-gray-900 hover:border-b-2 hover:border-gray-900 transition duration-300 ease-in-out">Home</a>
+        <a href="#about" class="px-3 py-2 text-sm font-medium text-gray-700 uppercase hover:text-gray-900 hover:border-b-2 hover:border-gray-900 transition duration-300 ease-in-out">About Us</a>
+        <a href="#vision" class="px-3 py-2 text-sm font-medium text-gray-700 uppercase hover:text-gray-900 hover:border-b-2 hover:border-gray-900 transition duration-300 ease-in-out">Vision</a>
+        <a href="#contact" class="px-3 py-2 text-sm font-medium text-gray-700 uppercase hover:text-gray-900 hover:border-b-2 hover:border-gray-900 transition duration-300 ease-in-out">Contact</a>
+      </nav>
+      <!-- Mobile Hamburger Menu Button -->
+      <div class="flex items-center md:hidden">
+        <button (click)="toggleMobileMenu()"
+                type="button"
+                class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-900 focus:outline-none"
+                aria-controls="mobile-menu"
+                [attr.aria-expanded]="mobileMenuOpen">
+          <span class="sr-only">Open main menu</span>
+          <svg *ngIf="!mobileMenuOpen" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg"
+               fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+          </svg>
+          <svg *ngIf="mobileMenuOpen" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg"
+               fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile Dropdown Menu -->
+  <nav *ngIf="mobileMenuOpen" id="mobile-menu" class="md:hidden">
+    <div class="px-2 pt-2 pb-3 space-y-1">
+      <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900">Home</a>
+      <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900">About Us</a>
+      <a href="#vision" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900">Vision</a>
+      <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900">Contact</a>
+    </div>
+  </nav>
+</header>
