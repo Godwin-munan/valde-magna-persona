@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { SHARED_IMPORTS } from './sharedmodules/shared.modules';
 
 @Component({
-  selector: 'app-root',
+  selector: 'valde-website',
   imports: [
     RouterOutlet,
     ...SHARED_IMPORTS
@@ -12,5 +12,6 @@ import { SHARED_IMPORTS } from './sharedmodules/shared.modules';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'valde-magna-persona';
+
+
 }
