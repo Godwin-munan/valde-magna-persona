@@ -1,0 +1,40 @@
+h1 {
+  text-align: left;
+  // font: var(--paragraph-font);
+}
+
+p {
+  font-size: var(--title-size);
+  color: var(--title-color);
+  font-family: var(--title-font);
+  font-weight: var(--title-style);
+  line-height: var(--default-line-height);
+  margin: 0;
+  margin-bottom: var(--title-margin-bottom);
+}
+
+.h3-span {
+
+  font-size: var(--subtitle-font);
+  color: var(--title-color);
+  line-height: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+}
+
+.home-section {
+  min-height: 27px;
+}
+
+.home-content {
+
+}
+
+.home-content:last-child {
+  margin-bottom: 0 !important;
+}
+.home-image {
+  
+}
+
