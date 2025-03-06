@@ -3,6 +3,7 @@
 @use "tailwindcss" as *;
 
 
+
 :root {
 
   --theme-color-1: #9A8F97;
@@ -39,4 +40,10 @@
   --paragraph-size: 18px;
   --paragraph-mobile-size: 16px;
   --paragraph-margin-bottom: 12px;
+}
+
+.container-custom {
+  width: 98%;
+  margin: 0 auto;
+  //padding: 0 1rem; /* adjust as needed */
 }
