@@ -1,17 +1,58 @@
 
-  <!-- Header Section -->
-  <app-header></app-header>
+<!-- <section id="home" class="p-4 pl-10 pb-10 flex flex-col lg:flex-row items-center justify-between"></section> -->
+<header 
+  [ngClass]="{'shadow': scrolled}" 
+  class="p-2 pl-10 pb-2 sm:pl-2 md:pl-5 justify-between bg-white fixed top-0 left-0 w-full items-center z-50">
+<!-- <header 
+  class="md:h-18 h-[72px] transition-all ease-out absolute bg-white text-base left-0 right-0 text-primary-959"> -->
+    <!-- Header Section -->
+    <app-header></app-header>
+</header>
 
+<main class="container-custom">
 
   <!-- Home Section -->
   <app-home></app-home>
-
+  
   <!-- Vision Section -->
-  <section id="vision" class="landing-section vision-section">
+  <!-- <section id="vision" class="landing-section vision-section"> -->
     <app-vision></app-vision>
-  </section>
+  <!-- </section> -->
 
-  <!-- Footer Section -->
-  <footer id="footer" class="landing-section footer-section">
-    <app-footer></app-footer>
-  </footer>
+   <!-- Problem condition section -->
+  <app-condition></app-condition>
+
+  <!-- Solution section -->
+  <app-solution></app-solution>
+
+  <!-- Market section -->
+  <app-market></app-market>
+
+  <!-- Competitors section -->
+  <app-competitors></app-competitors>
+
+  <!-- Partners section -->
+  <app-partners></app-partners>
+
+  <!-- Revenue section -->
+  <app-revenue></app-revenue>
+
+  <!-- Team section -->
+  <app-team></app-team>
+
+  <!-- Funds section -->
+  <app-funds></app-funds>
+
+  <!-- Road-map section -->
+  <app-road-map></app-road-map>
+  
+</main>
+
+<!-- Footer Section -->
+<footer id="footer" class="landing-section footer-section">
+  <app-footer></app-footer>
+</footer>
+
+  <!-- <div>
+    <h1 class="text-3xl font-bond underline bg-green-500 container">Hello WORLD</h1>
+  </div> -->
