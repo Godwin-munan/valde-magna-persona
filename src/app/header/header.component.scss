@@ -1,0 +1,6 @@
+/* Tablet breakpoints (e.g. between 768px and 1024px) */
+@media (min-width: 718px) and (max-width: 1138px) {
+  header nav ul {
+    gap: .5rem; /* reduce spacing on tablets */
+  }
+}
