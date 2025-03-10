@@ -1,1 +1,39 @@
-<p>competitors works!</p>
+<section class="mx-auto px-4 py-8 sm:px-2 sm:py-4">
+  <!-- Heading container -->
+  <div class="my-10 text-center justify-center">
+    <div>
+      <h2 class="text-center mx-0">
+        <span>Competitors</span>
+      </h2>
+    </div>
+  </div>
+  
+  <!-- Cards container -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mx-10">
+    <!-- Card 1 -->
+    <!-- <div *ngFor="let card of cards; trackBy: trackById" class="bg-white flex flex-col w-full max-w-[29rem] border border-gray-100 mx-auto overflow-hidden"> -->
+    <div *ngFor="let card of cards; trackBy: trackById" class="bg-white flex flex-col w-full max-w-[29rem] border border-gray-100 mx-auto overflow-hidden">
+      <div class="relative h-[8rem] overflow-hidden flex items-center justify-center text-center">
+        <img [src]="card.imageUrl" [alt]="card.title" class="w-48 h-48 object-contain">
+      </div>
+
+      <!-- Divider -->
+      <!-- <hr class="w-[28rem] border-t border-gray-200 mx-auto" /> -->
+      <hr class="w-full sm:w-[28rem] border-t border-gray-200 mx-auto" />
+
+      <div class="md:p-4 md:px-8 justify-start sm:p-2">
+        <div class="pt-10">
+          <h2 class="text-xl font-semibold mb-2 sm:text-lg">{{ card.title }}</h2>
+        </div>
+        <div>
+          <p class="text-gray-700">{{ card.description }}&#46;</p>
+        </div>
+        <div class="pt-0 pb-20 sm:pb-10">
+          <p class="font-bold subtitle-color"> {{ card.footer }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
