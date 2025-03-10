@@ -1,21 +1,27 @@
-<section id="vision" class="p-4 pl-10 pb-5 sm:pl-2 md:pl-5 bg-white flex flex-row lg:flex-row items-center justify-center">
-  <div class="w-full mx-5 my-10 items-center justify-center bg-white overflow-hidden shadow-lg">
-    <div class="px-6 py-4">
-      <h1>
-        <span style="color: rgb(255, 255, 255);">
-          <span style="color: rgb(0, 0, 0);">Our vision</span>
-        </span>
-      </h1>
+<section class="mx-auto px-4 py-8">
+  <!-- Heading container -->
+  <div class="my-10 text-center justify-center">
+    <div>
+      <h1 class="text-center">The Problem: what&rsquo;s wrong with the current condition&#63;</h1>
     </div>
-    <div class="px-6 pt-4 pb-2">
-      <p>
-        We envision a world where individuals and communities access essential healthcare services, disease prevention, and treatment, regardless of socioeconomic factors.
-      </p>
+    <div class="pb-8 pt-2">
+      <h3 class="text-center font-medium">Add some clear key points that will explain the problem&#46;</h3>
     </div>
-    <div class="px-6 pt-4 pb-2">
-      <p>
-        Promoting health equity and universal health coverage.
-      </p>
-    </div>
+    
   </div>
+  
+  <!-- Cards container -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <!-- Card 1 -->
+    <div *ngFor="let card of cards; trackBy: trackById" class="bg-white rounded-sm shadow overflow-hidden">
+  <div class="relative h-60 overflow-hidden">
+    <img [src]="card.imageUrl" [alt]="card.title" class="absolute inset-0 w-full h-full object-cover">
+  </div>
+  <div class="p-4">
+    <h2 class="text-xl font-semibold mb-2">{{ card.title }}</h2>
+    <p class="text-gray-700">{{ card.description }}&#46;</p>
+  </div>
+</div>
+  </div>
+  
 </section>
